@@ -147,34 +147,7 @@ public:
 
 
 
-    void InteractWorld(int dir) {
-        for (int i = ((y) / SIZE_OF_BLOCK); i < ((y + height) / SIZE_OF_BLOCK); i++) {
-            for (int j = (x / SIZE_OF_BLOCK); j < ((x+ width) / SIZE_OF_BLOCK) ; j++) {
-                if (TileMap[i][j] == '1') {
-                    if (dy > 0 && dir == 1) {
-                        y = ((i) * SIZE_OF_BLOCK) - height ;
-                        dy = 0;
-                        is_ground = true;
-                        count_jump = 0;
-                    }
-                    if (dy < 0 && dir == 1) {
-                        y = (i * SIZE_OF_BLOCK) + SIZE_OF_BLOCK;
-                        dy = 0;
-                    }
-                    if (dx > 0 && dir == 0) {
-                        x = (j * SIZE_OF_BLOCK) - width;
-                        dx = 0;
-                    }
-                    if (dx < 0 && dir == 0) {
-                        x = (j * SIZE_OF_BLOCK) + SIZE_OF_BLOCK;
-                        dx = 0;
-                    }
-                } else if (TileMap[i][j] != '1' && dir == 1){
-                    is_ground = false;
-                }
-            }
-        }
-    }
+  
 };
 
 #endif//TEST1_HERO_H
