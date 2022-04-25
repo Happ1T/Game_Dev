@@ -74,8 +74,8 @@ public:
             frame += speed_animation*time;
             //cout<<frame<<endl;
 
-            if (frame > 13)
-                frame -= 13;
+            if (frame > 12)
+                frame -= 12;
             if (dx == 0){
                 if (dir)
                     sprite.setTextureRect(IntRect(width * int(frame + 1) , height * 0 , -width, height));
